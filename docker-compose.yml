@@ -1,12 +1,13 @@
-version: '3.1'
+version: '3.7'
 services:
   api:
     container_name: trab_final
+    build: .
     networks:
       - docker_network
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
+      - ./:/app
+      - /app/node_modules
     depends_on:
       - db
 
