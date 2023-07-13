@@ -3,6 +3,8 @@ services:
   api:
     container_name: trab_final
     build: .
+    ports:
+      - ${API_PORT}:${API_PORT}
     networks:
       - docker_network
     volumes:
